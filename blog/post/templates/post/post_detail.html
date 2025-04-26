@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="obsidian-content">
+        <h1>{{ title }}</h1>
+        {{ html_content|safe }}
+    </div>
+</body>
+</html>

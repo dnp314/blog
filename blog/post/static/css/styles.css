@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600&family=Ubuntu:wght@400;700&display=swap');
+
+:root {
+  --bg-color: #161821;
+  --caret-color: #d2d4de;
+  --main-color: #84a0c6;
+  --sub-color: #595e76;
+  --sub-alt-color: #232531;
+  --text-color: #c6c8d1;
+  --error-color: #e27878;
+  --error-extra-color: #e2a478;
+  --colorful-error-color: #e27878;
+  --colorful-error-extra-color: #e2a478;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Ubuntu', sans-serif; /* Using Ubuntu font */
+  line-height: 1.6;
+  margin: 0;
+  font-size: 1.2rem;
+  
+}
+
+.obsidian-content {
+  margin: 0;
+  padding: 1rem;
+  font-family: 'Ubuntu', sans-serif; /* Ensuring consistency */
+}
+
+
+/* Headers */
+.obsidian-content h1, .obsidian-content h2, .obsidian-content h3,
+.obsidian-content h4, .obsidian-content h5, .obsidian-content h6 {
+  color: var(--main-color);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.obsidian-content h1:first-child {
+  margin-top: 0; /* Remove the top margin for the first h1 */
+}
+
+/* Links */
+.obsidian-content a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.obsidian-content a:hover {
+  text-decoration: underline;
+}
+
+/* Code blocks */
+.obsidian-content pre {
+  background-color: var(--sub-alt-color);
+  color: var(--text-color);
+  border-radius: 4px;
+  padding: 1em;
+  overflow: auto;
+}
+
+.obsidian-content code {
+  background-color: var(--sub-alt-color);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+/* Blockquotes */
+.obsidian-content blockquote {
+  border-left: 4px solid var(--sub-color);
+  background-color: var(--sub-alt-color);
+  color: var(--text-color);
+  padding: 0.5em 1em;
+  margin: 1em 0;
+}
+
+/* Tables */
+.obsidian-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+
+.obsidian-content th, .obsidian-content td {
+  border: 1px solid var(--sub-color);
+  padding: 0.5em;
+}
+
+.obsidian-content th {
+  background-color: var(--sub-alt-color);
+  color: var(--text-color);
+}
+
+/* Errors/Warnings (Optional if you have callouts) */
+.obsidian-content .error {
+  color: var(--error-color);
+}
+
+.obsidian-content .warning {
+  color: var(--error-extra-color);
+}
