@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-m_#tfm!z_)@w^uw%hrp)0nn!59(6=s91=a%n!o@dk=uzj@oi6^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['divyesh.onrender.com']
 
 OBSIDIAN_VAULT_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'Posts')
 OBSIDIAN_MEDIA_PATH = os.path.join(OBSIDIAN_VAULT_PATH, 'media')
@@ -38,7 +38,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
 ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'blog.urls'
 
