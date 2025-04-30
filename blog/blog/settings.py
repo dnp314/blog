@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-m_#tfm!z_)@w^uw%hrp)0nn!59(6=s91=a%n!o@dk=uzj@oi6^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['divyesh.onrender.com']
+ALLOWED_HOSTS = ['divyesh.onrender.com','127.0.0.1']
 
 OBSIDIAN_VAULT_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'Posts')
 OBSIDIAN_MEDIA_PATH = os.path.join(OBSIDIAN_VAULT_PATH, 'media')

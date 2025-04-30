@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600&family=Ubuntu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive:MONO,CASL,slnt,wght@300..1000&display=swap');
 
 :root {
   --bg-color: #161821;
@@ -11,24 +11,31 @@
   --error-extra-color: #e2a478;
   --colorful-error-color: #e27878;
   --colorful-error-extra-color: #e2a478;
+
+  /* Font variation axes */
+  --mono: "MONO" 0;
+  --casl: "CASL" 0;
+  --wght: "wght" 600;
+  --slnt: "slnt" 0;
+  --CRSV: "CRSV" 0.5;
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: 'Ubuntu', sans-serif; /* Using Ubuntu font */
+  font-family: 'Recursive', sans-serif; /* Ensure Recursive is applied */
+  font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
   line-height: 1.6;
   margin: 0;
   font-size: 1.2rem;
-  
 }
 
 .obsidian-content {
   margin: 0;
   padding: 1rem;
-  font-family: 'Ubuntu', sans-serif; /* Ensuring consistency */
+  font-family: 'Recursive', sans-serif; /* Ensure Recursive is applied */
+  font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
 }
-
 
 /* Headers */
 .obsidian-content h1, .obsidian-content h2, .obsidian-content h3,
@@ -36,11 +43,11 @@ body {
   color: var(--main-color);
   margin-top: 1.5em;
   margin-bottom: 0.5em;
-  font-weight: 600;
+  font-weight: 600; /* Use font-weight for stronger control */
 }
 
 .obsidian-content h1:first-child {
-  margin-top: 0; /* Remove the top margin for the first h1 */
+  margin-top: 0;
 }
 
 /* Links */
@@ -94,7 +101,7 @@ body {
   color: var(--text-color);
 }
 
-/* Errors/Warnings (Optional if you have callouts) */
+/* Errors/Warnings */
 .obsidian-content .error {
   color: var(--error-color);
 }
